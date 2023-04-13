@@ -1,9 +1,15 @@
 import Head from 'next/head'
-import Image from 'next/image'
+
 import { Inter } from 'next/font/google'
 import Link from 'next/link'
 
 import { useRef, useEffect, useState } from 'react'
+
+import useScrollSnap from 'react-use-scroll-snap';
+
+// Images
+import Image from 'next/image'
+import profilePic from '../images/my_img.jpg'
 
 import Navbar from '@/components/Navbar'
 
@@ -27,6 +33,9 @@ export default function Home() {
 
   const sectionRef = useRef<HTMLDivElement | any>();
 
+  const scrollRef = useRef(null);
+  // useScrollSnap({ ref: scrollRef, duration: 5, delay: 30 });
+
   useEffect(() => {
     if (typeof window !== undefined) {
       window.addEventListener("scroll", handleWindowScrollAndResize);
@@ -49,21 +58,42 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="h-[100vh] bg-gray-600">
-        <div className="h-full bg-gray-600 flex justify-center items-center">
+      <main ref={scrollRef} className="h-full bg-gray-600">
+        <div className="h-[100vh] bg-gray-600 flex justify-center items-center">
           <h1 className='text-8xl font-bold text-white border-b-8'>Hi!</h1>
         </div>
-        <div className="h-full bg-gray-600 flex justify-center items-center flex-col">
+        <div className="h-[100vh] bg-gray-600 flex justify-center items-center flex-col">
+          <Image src={profilePic} width={200} height={200} alt="Profile Picture" className='rounded-full' />
           <h1 className='text-7xl font-bold text-white'>My name is</h1>
           <h1 className='text-7xl font-bold text-white border-b-8'>Kevin Gavino!</h1>
         </div>
-        <div ref={sectionRef} className="flex flex-col justify-center items-center h-full w-full bg-gray-600">
+        <div ref={sectionRef} className="flex flex-col justify-center items-center h-full w-full bg-gray-600 p-10">
           {isReached ? <Navbar /> : ''}
-          <div className='flex justify-center items-center grid grid-cols-2 gap-4 justify-between h-full w-full p-10'>
+          <div className='flex justify-center items-center grid grid-cols-1 md:grid-cols-2 gap-4 justify-between h-full w-full'>
             <div className='h-[20%] w-[100%] p-2 flex flex-col'>
               <h2 className='text-4xl font-bold text-white text-left'>My Background</h2>
               <p className='text-xl text-white text-justify'>Currently a freshgraduate from Xi'an Jiaotong - The Liverpool University,
-                that can be considered as fullstack developer. I love all kind about Business, Technology, Photography, and Videography. I am a hardworking, diligent, and honest person.</p>
+                that can be considered as fullstack developer. I love all kind about Business, Technology, Photography, and Videography. I am a hardworker, diligent, and honest person.</p>
+            </div>
+
+            <div className='h-[20%] w-[100%] p-2 flex flex-col text-white'>
+              <h2 className='text-4xl font-bold text-left'>My Contact</h2>
+              <p className='text-xl text-justify'>I would love to be contacted, if you want to talk about my works.</p>
+              <p className='text-xl font-bold'>Contact:</p>
+              <ul>
+                <li>1. Phone: +62 811-288-044</li>
+                <li>2. E-mail: florentinus.keving@gmail.com</li>
+                <li>3. Instagram: @florentinuskev</li>
+              </ul>
+            </div>
+
+            <div className='h-[20%] w-[100%] p-2 flex flex-col text-white'>
+              <h2 className='text-4xl font-bold text-left'>My Education</h2>
+              <p className='text-xl text-justify'>I did go to college after I graduated from Highscool, i was going to Xi'an Jiaotong - The Liverpool University for my Bacherlor degree.</p>
+              <p className='text-xl font-bold'>Education:</p>
+              <ul>
+                <li>1. Information System and Computing Science - Bachelor of Science (Second Upper) (Sept 2018 - Jun 2022)</li>
+              </ul>
             </div>
 
             <div className='h-[20%] w-[100%] p-2 flex flex-col text-white'>
@@ -79,7 +109,10 @@ export default function Home() {
                 <li>2. Highschool Student Council - Journalism Team Leader (2017-2018)</li>
               </ul>
             </div>
-
+          </div>
+        </div>
+        <div className='flex flex-row justify-center items-center h-[100vh] w-full bg-gray-600 p-10'>
+          <div className='flex justify-center items-center grid grid-cols-1 md:grid-cols-2 gap-4 justify-between h-full w-full'>
             <div className='h-[20%] w-[100%] p-2 flex flex-col justify-center text-white'>
               <h2 className='text-4xl font-bold text-left'>Programming</h2>
               <p className='text-xl text-justify'>I faced my first programming language which is the PAWN language when I was in Elementary School. Since that, I went through many different programming language such as C, C#, Java, Javascript, Python, and Golang. I love to do programming, since it can create something with a text.</p>
