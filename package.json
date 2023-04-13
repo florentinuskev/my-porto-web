@@ -20,6 +20,7 @@
     "react-dom": "18.2.0",
     "react-icons": "^4.8.0",
     "react-use-scroll-snap": "^0.0.4",
+    "sharp": "^0.32.0",
     "tailwind-scrollbar-hide": "^1.1.7",
     "typescript": "5.0.3"
   },

@@ -75,7 +75,7 @@ export default function Home() {
           <div className='flex justify-center items-center grid grid-cols-1 md:grid-cols-2 gap-4 justify-between h-full w-full'>
             <div className='h-[20%] w-[100%] p-2 flex flex-col'>
               <h2 className='flex flex-row items-center text-4xl font-bold text-white text-left'><FcBusinessman size={30} className='mr-2' /> My Background</h2>
-              <p className='text-xl text-white text-justify'>Currently a freshgraduate from Xi'an Jiaotong - The Liverpool University,
+              <p className='text-xl text-white text-justify'>Currently a freshgraduate from Xi&apos;an Jiaotong - The Liverpool University,
                 that can be considered as fullstack developer. I love all kind about Business, Technology, Photography, and Videography. I am a hardworker, diligent, and honest person.</p>
             </div>
 
@@ -92,7 +92,7 @@ export default function Home() {
 
             <div className='h-[20%] w-[100%] p-2 flex flex-col text-white'>
               <h2 className='flex flex-row items-center text-4xl font-bold text-left'><FcGraduationCap size={30} className='mr-2' />My Education</h2>
-              <p className='text-xl text-justify'>I did go to college after I graduated from Highscool, i was going to Xi'an Jiaotong - The Liverpool University for my Bacherlor degree.</p>
+              <p className='text-xl text-justify'>I did go to college after I graduated from Highscool, i was going to Xi&apos;an Jiaotong - The Liverpool University for my Bacherlor degree.</p>
               <p className='text-xl font-bold'>Education:</p>
               <ul>
                 <li>1. Information System and Computing Science - Bachelor of Science (Second Upper) (Sept 2018 - Jun 2022)</li>
