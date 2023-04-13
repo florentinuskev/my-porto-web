@@ -8,7 +8,7 @@ const projects = ({ data }: any) => {
             <Navbar isSticky={true} />
             <div className='flex flex-col h-[100%] text-white p-10'>
                 <h1 className='text-7xl font-bold'>Programming</h1>
-                <div className="grid grid-cols-2 gap-4 mt-5">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
                     <div className="rounded-xl border p-5">
                         <h2 className="text-2xl font-bold">Programming Background</h2>
                         <p className="text-xl text-justify">Since the Elementary School, I have been code a program for SA-MP Gamemode. After encounter that, I was moving on to another programming languages such as C, C#, Java, Javascript, Python, and More!</p>
@@ -32,7 +32,7 @@ const projects = ({ data }: any) => {
                 <div className="border rounded-xl p-5 mt-5">
                     <h2 className="text-2xl font-bold">Programming Projects</h2>
                     <p className='text-xl'>There are several programming projects that I have been created and working on right now. These are several projects that I have been working on:</p>
-                    <div className="grid grid-cols-3 gap-4 mt-5">
+                    <div className="grid  grid-cols-1 md:grid-cols-3 gap-4 mt-5">
                         {data.map((repo: any, i: any) => (<RepoCard repo={repo} key={i} />))}
                     </div>
                 </div>
