@@ -32,7 +32,7 @@ const projects = ({ data }: any) => {
                 <div className="border rounded-xl p-5 mt-5">
                     <h2 className="text-2xl font-bold">Programming Projects</h2>
                     <p className='text-xl'>There are several programming projects that I have been created and working on right now. These are several projects that I have been working on:</p>
-                    <div className="grid  grid-cols-1 md:grid-cols-3 gap-4 mt-5">
+                    <div className="grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-5">
                         {data.map((repo: any, i: any) => (<RepoCard repo={repo} key={i} />))}
                     </div>
                 </div>

@@ -8,7 +8,7 @@ import { FaGithub } from 'react-icons/fa';
 
 const RepoCard = ({ repo }: any) => {
     return (
-        <div className='h-[150px] border rounded relative p-5 hover:cursor-pointer' onClick={() => { window.open(repo.html_url) }}>
+        <div className='h-[150px] md:h-[300px] lg:h-[200px] border rounded relative p-5 hover:cursor-pointer' onClick={() => { window.open(repo.html_url) }}>
             <h3 className='text-2xl font-bold'>{repo.name}</h3>
             <p className='text-lg'>{repo.description}</p>
             <div className='absolute bottom-3 right-0 flex flex-row w-[100%]'>
