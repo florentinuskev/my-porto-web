@@ -61,7 +61,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main ref={scrollRef} className="flex flex-col h-[100%] bg-gray-600">
+      <main ref={scrollRef} className="flex flex-col h-full bg-gray-600">
         <div className="h-[100vh] bg-gray-600 flex justify-center items-center">
           <h1 className='text-8xl font-bold text-white border-b-8'>Hi!</h1>
         </div>
@@ -71,11 +71,9 @@ export default function Home() {
           <h1 className='text-7xl font-bold text-white text-center'>My name is</h1>
           <h1 className='text-7xl font-bold text-white text-center border-b-8'>Kevin Gavino!</h1>
         </div>
-        <div ref={sectionRef} className=' my-10'>
+        <div ref={sectionRef} className='flex h-full md:h-[100vh] bg-gray-600 w-full p-5 md:p-10 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-4'>
           {isReached ? <Navbar /> : ''}
-        </div>
-        <div className='flex h-full w-full p-5 md:p-10 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-4'>
-          <div className='h-[100%] w-[100%] p-2 flex flex-col'>
+          <div className='h-full w-[100%] p-2 flex flex-col'>
             <h2 className='flex flex-row items-center text-4xl font-bold text-white text-left'><FcBusinessman size={30} className='mr-2' /> My Background</h2>
             <p className='text-xl text-white text-justify'>Currently a freshgraduate from Xi&apos;an Jiaotong - The Liverpool University,
               that can be considered as fullstack developer. I love all kind about Business, Technology, Photography, and Videography. I am a hardworker, diligent, and honest person.</p>
