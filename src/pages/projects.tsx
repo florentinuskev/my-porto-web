@@ -7,7 +7,7 @@ const projects = ({ data }: any) => {
         <div className='bg-gray-600 h-[100%]'>
             <Navbar isSticky={true} />
             <div className='flex flex-col h-[100%] text-white p-10'>
-                <h1 className='text-7xl font-bold'>Programming</h1>
+                <h1 className='text-5xl md:text-7xl font-bold'>Programming</h1>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-5">
                     <div className="rounded-xl border p-5">
                         <h2 className="text-2xl font-bold">Programming Background</h2>

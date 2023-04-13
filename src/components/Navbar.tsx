@@ -22,10 +22,10 @@ const Navbar = ({ isSticky }: any) => {
                 <Link href='/pvgraphy' className='mx-2'><p>Photo and Videography</p></Link>
             </div>
             {/* Mobile Menu*/}
-            <div className={`${isOpen ? 'flex' : 'hidden'} flex-col items-center bg-gray-600`} >
-                <Link href='/' className='mx-3'><p className='text-2xl'>Home</p></Link>
-                <Link href='/projects' className='mx-2'><p className='text-2xl'>Programming</p></Link>
-                <Link href='/pvgraphy' className='mx-2'><p className='text-2xl'>Photo and Videography</p></Link>
+            <div className={`${isOpen ? 'flex' : 'hidden'} flex-col items-center bg-gray-600 border-t w-full`} >
+                <Link href='/' className='mx-3 my-2 border-b w-full'><p className='text-2xl text-center'>Home</p></Link>
+                <Link href='/projects' className='mx-3 my-2 border-b w-full'><p className='text-2xl text-center'>Programming</p></Link>
+                <Link href='/pvgraphy' className='mx-3 my-2 border-b w-full'><p className='text-2xl text-center'>Photo and Videography</p></Link>
             </div>
 
         </div>
